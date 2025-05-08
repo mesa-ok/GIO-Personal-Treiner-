@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Original variables */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 24 100% 50%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gio-black text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .gio-container {
+    @apply max-w-screen-xl mx-auto px-4 sm:px-6 pb-24;
+  }
+  
+  .gio-card {
+    @apply bg-gio-darkgray rounded-lg p-4 shadow-md border border-gio-gray;
+  }
+  
+  .gio-heading {
+    @apply text-2xl font-bold mb-4;
+  }
+  
+  .gio-subheading {
+    @apply text-xl font-semibold mb-3;
+  }
+  
+  .gio-gradient-text {
+    @apply bg-gradient-to-r from-gio-orange to-gio-orange-light text-transparent bg-clip-text;
+  }
+  
+  .bottom-nav-item {
+    @apply flex flex-col items-center justify-center gap-1 text-xs font-medium text-gray-400 transition-colors;
+  }
+  
+  .bottom-nav-item.active {
+    @apply text-gio-orange;
+  }
+}
